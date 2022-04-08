@@ -5,7 +5,8 @@ public class Food {
     private int calories;
     private Float caloriesInGram;
 
-    public Food() {}
+    public Food() {
+    }
 
     public Food(String foodName, int calories) {
         this.foodName = foodName;
@@ -37,7 +38,7 @@ public class Food {
                 '}';
     }
 
-    public float caloriesEaten(int gram){
+    public float caloriesEaten(int gram) {
         return gram * caloriesInGram;
     }
 }

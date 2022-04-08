@@ -11,11 +11,11 @@ public class Config {
 
     public static Properties properties = new Properties();
 
-    public synchronized static String getProperty(String name){
-        if(properties.isEmpty()){
-            try(InputStream inputStream = Config.class.getClassLoader().getResourceAsStream("dao.properties")){
+    public synchronized static String getProperty(String name) {
+        if (properties.isEmpty()) {
+            try (InputStream inputStream = Config.class.getClassLoader().getResourceAsStream("dao.properties")) {
                 properties.load(inputStream);
-            }catch (Exception ex){
+            } catch (Exception ex) {
                 ex.printStackTrace();
                 throw new RuntimeException(ex);
             }
